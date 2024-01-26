@@ -1,0 +1,8 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permite la lectura y escritura en cualquier documento y colección
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
