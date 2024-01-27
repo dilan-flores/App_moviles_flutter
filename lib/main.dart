@@ -1,10 +1,13 @@
-import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+// Copyright 2022 The Flutter Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart';               // new
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';                 // new
 
-import 'app_state.dart';
+import 'app_state.dart';                                 // new
 import 'home_page.dart';
 
 void main() {
@@ -15,7 +18,7 @@ void main() {
     builder: ((context, child) => const App()),
   ));
 }
-
+// Add GoRouter configuration outside the App class
 final _router = GoRouter(
   routes: [
     GoRoute(
@@ -37,20 +40,17 @@ final _router = GoRouter(
                   context.push(uri.toString());
                 })),
                 AuthStateChangeAction(((context, state) {
-                  final user = state is SignedIn
-                      ? state.user
-                      : state is UserCreated
-                          ? state.credential.user
-                          : null;
-
+                  final user = switch (state) {
+                    SignedIn state => state.user,
+                    UserCreated state => state.credential.user,
+                    _ => null
+                  };
                   if (user == null) {
                     return;
                   }
-
                   if (state is UserCreated) {
                     user.updateDisplayName(user.email!.split('@')[0]);
                   }
-
                   if (!user.emailVerified) {
                     user.sendEmailVerification();
                     const snackBar = SnackBar(
@@ -67,8 +67,7 @@ final _router = GoRouter(
             GoRoute(
               path: 'forgot-password',
               builder: (context, state) {
-                final uri = GoRouterState.of(context).uri;
-                final arguments = uri.queryParameters;
+                final arguments = state.uri.queryParameters;
                 return ForgotPasswordScreen(
                   email: arguments['email'],
                   headerMaxExtent: 200,
@@ -94,9 +93,11 @@ final _router = GoRouter(
     ),
   ],
 );
+// end of GoRouter configuration
 
+// Change MaterialApp to MaterialApp.router and add the routerConfig
 class App extends StatelessWidget {
-  const App({Key? key});
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +114,8 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
       ),
-      routerDelegate: _router.routerDelegate,
+      routerConfig: _router, // new
     );
   }
 }
+
