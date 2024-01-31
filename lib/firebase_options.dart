@@ -44,42 +44,42 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD8mOJUbAF4YrHA2MxMOcW_uSLaxxPSkSU',
-    appId: '1:775710742379:web:175898fca775a494601e2e',
-    messagingSenderId: '775710742379',
-    projectId: 'chat2023-8664a',
-    authDomain: 'chat2023-8664a.firebaseapp.com',
-    databaseURL: 'https://chat2023-8664a-default-rtdb.firebaseio.com',
-    storageBucket: 'chat2023-8664a.appspot.com',
-    measurementId: 'G-H67K9THXBF',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    messagingSenderId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    projectId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    authDomain: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    databaseURL: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    storageBucket: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    measurementId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAx9JNm_naxXvJitfTR8g9JqnUT47iizv4',
-    appId: '1:775710742379:android:eac30e1d4500a45d601e2e',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
     messagingSenderId: '775710742379',
-    projectId: 'chat2023-8664a',
-    databaseURL: 'https://chat2023-8664a-default-rtdb.firebaseio.com',
-    storageBucket: 'chat2023-8664a.appspot.com',
+    projectId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    databaseURL: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    storageBucket: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBMcH52Ae12PiRMH4FT6u9MylOBX1DI9iI',
-    appId: '1:775710742379:ios:1cce65748336b2a6601e2e',
-    messagingSenderId: '775710742379',
-    projectId: 'chat2023-8664a',
-    databaseURL: 'https://chat2023-8664a-default-rtdb.firebaseio.com',
-    storageBucket: 'chat2023-8664a.appspot.com',
-    iosBundleId: 'com.example.gtkFlutter',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    messagingSenderId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    projectId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    databaseURL: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    storageBucket: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    iosBundleId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBMcH52Ae12PiRMH4FT6u9MylOBX1DI9iI',
-    appId: '1:775710742379:ios:4cd27981ff179fcc601e2e',
-    messagingSenderId: '775710742379',
-    projectId: 'chat2023-8664a',
-    databaseURL: 'https://chat2023-8664a-default-rtdb.firebaseio.com',
-    storageBucket: 'chat2023-8664a.appspot.com',
-    iosBundleId: 'com.example.gtkFlutter.RunnerTests',
+    apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    appId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    messagingSenderId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    projectId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    databaseURL: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    storageBucket: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    iosBundleId: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
   );
 }
